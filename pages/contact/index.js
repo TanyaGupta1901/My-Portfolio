@@ -1,5 +1,89 @@
+/* eslint-disable react/no-unescaped-entities */
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import {IoIosMail, IoLogoTwitter, IoLogoLinkedin, IoLogoGithub} from 'react-icons/io';
+import {BiSolidPhoneCall} from 'react-icons/bi';
+import Image from 'next/image';
+import TiltImage from '../../components/TiltImage';
+
 const Contact = () => {
-  return <div>Contact</div>;
+
+  const balls = [{
+    id: 1,
+    top: '16rem',
+    left: '8rem',
+    size: '9rem',
+    icon: <BiSolidPhoneCall />,
+    href: 'tel:8303073171',
+  },
+  {
+    id: 2,
+    right: '30rem',
+    top: '12rem',
+    size: '12rem',
+    icon: <IoLogoTwitter />,
+    href: 'https://twitter.com/Tzee1901',
+  },
+  {
+    id: 3,
+    left: '20rem',
+    bottom: '6rem',
+    size: '12rem',
+    icon: <IoIosMail />,
+    href: 'mailto:tanyag1901@gmail.com',
+  },
+  {
+    id: 4,
+    right: '30rem',
+    bottom: '4rem',
+    size: '10rem',
+    icon: <IoLogoGithub />,
+    href: 'https://github.com/TanyaGupta1901',
+  },
+  {
+    id: 5,
+    top: '10rem',
+    left: '30rem',
+    size: '8rem',
+    icon: <IoLogoLinkedin />,
+    href: 'https://www.linkedin.com/in/tanya-gupta-b40621197/',
+  },
+  {
+    id: 4,
+    right: '13rem',
+    bottom: '14rem',
+    size: '8rem',
+    icon: <IoIosMail />,
+    href: 'mailto:tanyag1901@gmail.com',
+  }]
+
+  return (
+    <>
+    <div className="hidden lg:flex flex-col items-center w-full justify-center z-1">
+      <h1 className="h1 p-8 text-5xl">Let's Chat!</h1>
+      <Image src="/contact.png" width={650} height={550} alt="get in touch" ></Image>
+      {balls.map((ball) => {
+        return <motion.div
+        transition={{repeat: Infinity, ease: 'easeIn', duration: 5, repeatType: 'reverse'}}
+        animate={{duration: 10, x: Math.random() * 180, y: Math.random()*100}}
+        key={ball.id}
+        style={{ width: ball.size, height: ball.size, top: ball.top, left: ball.left, right: ball.right, bottom: ball.bottom}}
+        className="bubble absolute bg-white/20 p-8 rounded-full flex items-center justify-center text-7xl text-accent"
+      > <a href={ball.href}>{ball.icon}</a>
+      </motion.div>
+      })}
+    </div>
+    <div className='flex lg:hidden flex-col justify-center items-center z-1 mt-4'> 
+    <h1 className="h1 p-8 text-5xl">Let's Chat!</h1>
+      <Image src="/contact.png" width={650} height={550} alt="get in touch"></Image>
+      <div className='flex flex-wrap flex-row justify-center items-center gap-2'>
+        {balls.map((item) => {
+          return <div key={item.id} className='rounded-full bg-white/10 text-accent text-2xl p-8  bubble'>{item.icon}</div>
+        })}
+      </div>
+    </div>
+    </>
+  );
 };
 
 export default Contact;
