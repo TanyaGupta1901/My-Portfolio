@@ -12,7 +12,7 @@ const Home = () => {
           Hi, my name is<span className="text-accent"></span>
           <br /> <span className="text-accent">Tanya Gupta</span>.
         </p>
-        <p className="xl:w-[90%] mt-[1rem]">
+        <p className="xl:w-[90%] mt-[1rem] h-[10rem]">
           <Typewriter
             words={[
               "Creative software developer, experienced in building user-friendly and engaging web experiences"]}
@@ -25,16 +25,16 @@ const Home = () => {
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="relative m-8 bg-circleStar bg-no-repeat bg-center hidden md:flex "
+          className="relative m-4 hidden md:block "
         >
           <Image
             src="/round-text.png"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             alt="rounded-text"
             className="animate-spin-slow w-full h-full"
           />
-          <HiArrowRight className="absolute top-[4.5rem] left-[6.5rem] text-4xl hover:scale-[2] transition-all duration-300" />
+          <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E"><HiArrowRight className="absolute top-[45%] left-[45%] text-xl hover:scale-[2] transition-all duration-300" /></a>
         </motion.div>
       </div>
       <TiltImage>

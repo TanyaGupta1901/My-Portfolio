@@ -115,7 +115,7 @@ const Work = () => {
         </div>
       </div>
       <div>
-        <div className="w-[80%] m-auto flex flex-row overflow-x-scroll snap-x snap-mandatory scrollbar scrollbar-track-white/20 scrollbar-thumb-accent scrollbar-rounded-large">
+        <div className="w-[80%] m-auto md:mt-4 flex flex-row overflow-x-scroll snap-x snap-mandatory scrollbar scrollbar-track-white/20 scrollbar-thumb-accent scrollbar-rounded-large scrollbar-thin">
           {projects.map((project) => {
             return (
               <div
