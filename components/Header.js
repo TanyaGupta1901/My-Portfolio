@@ -28,7 +28,7 @@ const Header = () => {
       initial={{opacity: 0, x: 100}}
       animate={{opacity: 1, x: 0}}
       transition={{duration: 2}}
-      className="h1 md:p-8">
+      className="h1 md:p-y-4 p-x-8">
         {"< "}
         <span className="text-accent">tanya gupta</span>
         {" />"}
@@ -39,7 +39,7 @@ const Header = () => {
       transition={{ duration: 1, delay:0.5 }}
       className="flex flex-row justify-center md:justify-evenly items-center gap-[0.5rem] md:gap-[4rem] p-3 md:mr-8">
         {socials.map((item) => (
-          <li className="text-white h1 hover:text-accent" key={item.id}>
+          <li className="text-accent h1 hover:text-white" key={item.id}>
             <a href={item.link}>{item.icon}</a>
           </li>
         ))}

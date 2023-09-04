@@ -93,20 +93,20 @@ const Work = () => {
             return (
               <div
                 key={org.id}
-                className="flex flex-row gap-2 p-2 m-1 bg-white/10 rounded-xl width-[50%]"
+                className="flex flex-row gap-2 md:p-2 m-1 bg-white/10 rounded-xl width-[50%]"
               >
                 <div className="flex items-center">
                   <Image
                     src={org.logo}
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     className="rounded-full hidden md:flex"
                     alt="organization logo"
                   />
                 </div>
-                <div className="p-2">
-                  <p className="text-md">{org.name}</p>
-                  <p className="text-md">{org.role}</p>
+                <div className="p-2 text-sm">
+                  <p className="text-sm">{org.name}</p>
+                  <p className="text-sm">{org.role}</p>
                   <p className="text-sm">{org.duration}</p>
                 </div>
               </div>
@@ -119,7 +119,7 @@ const Work = () => {
           {projects.map((project) => {
             return (
               <div
-                className="w-full flex flex-col lg:flex-row items-center justify-center flex-shrink-0 snap-center md:gap-4 p-4 mt-4 text-center"
+                className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-center flex-shrink-0 snap-center md:gap-4 p-4 lg:mt-4 text-center"
                 key={project.id}
               >
                 <motion.img
@@ -128,12 +128,12 @@ const Work = () => {
                   transition={{ duration: 1.2 }}
                   viewport={{once: true}}
                   src={project.src}
-                  width={600}
+                  width={500}
                   height={500}
                   alt="project image"
                 />
                 <div className="w-full lg:w-[40%] flex flex-col gap-2 items-center">
-                  <h1 className="h1 text-md text-accent">{project.name}</h1>
+                  <h1 className="h1 text-accent">{project.name}</h1>
                   <div className="flex flex-row justify-evenly w-full">
                   <a href={project?.github} className="h1 text-accent">
                     <RiGithubLine />

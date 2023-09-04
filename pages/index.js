@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center m-2 md:w-[80%] md:m-auto xl:width-[60%]">
       <div className="flex flex-col justify-between items-start text-white font-bold xl:w-[40%] w-full pr-8 md:ml-8">
-        <p className="h2">
+        <p className="h1">
           Hi, my name is<span className="text-accent"></span>
           <br /> <span className="text-accent">Tanya Gupta</span>.
         </p>
-        <p className="xl:w-[90%] mt-[2rem] md:text-[23px]">
+        <p className="xl:w-[90%] mt-[1rem]">
           <Typewriter
             words={[
               "Creative software developer, experienced in building user-friendly and engaging web experiences"]}
@@ -44,7 +44,7 @@ const Home = () => {
           transition={{ duration: 1.5 }}
           className="flex justify-center items-center xl:bg-white xl:bg-opacity-10 xl:backdrop-blur-s drop-shadow-lg rounded-full p-4 z-10"
         >
-          <Image src="/devgirl2.png" width={650} height={650} alt="devgirl" />
+          <Image src="/devgirl2.png" width={550} height={550} alt="devgirl" />
         </motion.div>
       </TiltImage>
     </div>

@@ -218,10 +218,10 @@ const Services = () => {
   ];
   return (
     <>
-    <h1 className="flex items-center justify-center z-1 h1 text-accent top-[10%] left-[50%] md:text-5xl">Skills</h1>
-    <div className="flex lg:flex-row flex-col w-[92%]  lg:w-[80%] m-auto z-1">
+    <h1 className="flex items-center justify-center z-1 h1 text-accent md:absolute md:rotate-90 h1 text-2xl md:text-5xl md:right-[2rem] md:top-[10rem]">Skills</h1>
+    <div className="flex lg:flex-row flex-col w-[95%]  md:w-[70%] m-auto z-1">
       <motion.div
-       className="skillBubble m-auto flex h-[30rem] md:h-[35rem] flex-wrap items-center justify-center overflow-hidden relative">
+       className="skillBubble m-auto flex h-[30rem] md:h-[38rem] flex-wrap items-center justify-center overflow-hidden relative">
         {skills.map((skill) => {
           return (
             <motion.div
@@ -231,10 +231,10 @@ const Services = () => {
               key={skill.id}
               className="p-4 flex flex-col items-center justify-center"
             >
-              <div className="bg-white/20 p-4 lg:p-10 bubble rounded-full w-[5rem] h-[5rem] lg:w-[10rem] lg:h-[10rem] flex items-center justify-center">
-                <img src={skill.src} alt={skill.label} />
+              <div className="bg-white/30 p-4 lg:p-10 bubble rounded-full w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem] flex items-center justify-center">
+                <img src={skill.src} alt={skill.label} width={'100%'} height={'100%'}/>
               </div>
-              <p>{skill.label}</p>
+              <p className="text-sm">{skill.label}</p>
             </motion.div>
           );
         })}
