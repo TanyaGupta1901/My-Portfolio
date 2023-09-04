@@ -32,7 +32,7 @@ const Home = () => {
             width={150}
             height={150}
             alt="rounded-text"
-            className="animate-spin-slow w-full h-full"
+            className="animate-spin-slow"
           />
           <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E"><HiArrowRight className="absolute top-[45%] left-[45%] text-xl hover:scale-[2] transition-all duration-300" /></a>
         </motion.div>
