@@ -37,16 +37,18 @@ const Home = () => {
           <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E"><HiArrowRight className="absolute top-[45%] left-[45%] text-xl hover:scale-[2] transition-all duration-300" /></a>
         </motion.div>
       </div>
+      <div className="z-0">
       <TiltImage>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: [0, 0.5, 1, 1.2, 1] }}
           transition={{ duration: 1.5 }}
-          className="flex justify-center items-center xl:bg-white xl:bg-opacity-10 xl:backdrop-blur-s drop-shadow-lg rounded-full p-4 z-10"
+          className="flex justify-center items-center xl:bg-white xl:bg-opacity-10 xl:backdrop-blur-s drop-shadow-lg rounded-full p-4"
         >
           <Image src="/devgirl2.png" width={550} height={550} alt="devgirl" />
         </motion.div>
       </TiltImage>
+      </div>
     </div>
   );
 };

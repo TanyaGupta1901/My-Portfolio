@@ -27,7 +27,7 @@ const Nav = () => {
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, delay:0.5 }}
-      className="flex flex-col items-center p-8 lg:justify-center gap-y-4 fixed h-max bottom-0 mt-auto lg:left-[2rem] z-100 top-0 w-full lg:w-16 lg:max-w-md lg:h-screen"
+      className="flex flex-col items-center p-8 lg:justify-center gap-y-4 fixed h-max bottom-0 mt-auto lg:left-[2rem] z-50 top-0 w-full lg:w-16 lg:max-w-md lg:h-screen"
     >
       <div className="flex lg:flex-col gap-8 text-white bg-white/10 p-4 justify-center items-center text-2xl rounded-full">
         {links.map((link, index) => {
