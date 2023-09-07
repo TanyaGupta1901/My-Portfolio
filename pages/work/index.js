@@ -120,7 +120,7 @@ const Work = () => {
         </div>
       </div>
       <div>
-        <div className="w-[80%] m-auto md:mt-8 flex flex-row overflow-x-scroll snap-x snap-mandatory scrollbar-track-white/20 scrollbar-thumb-accent scrollbar-rounded-large scrollbar-thin">
+        <div className="w-full md:w-[80%] m-auto md:mt-8 flex flex-row overflow-x-scroll snap-x snap-mandatory scrollbar-track-white/20 scrollbar-thumb-accent scrollbar-rounded-large scrollbar-thin">
           {projects.map((project) => {
             return (
               <div
@@ -128,8 +128,8 @@ const Work = () => {
                 key={project.id}
               >
                 <motion.img
-                  initial={{ y: -200, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ translateY: -200, opacity: 0 }}
+                  whileInView={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
                   src={project.src}
