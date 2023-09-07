@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {useState} from 'react';
 
 const Services = () => {
   const skills = [
@@ -212,22 +213,33 @@ const Services = () => {
       id: 20,
       label: "Webstorm",
       src: "/icons/webstorm.png",
-    },
-    
-    
+    },  
   ];
+
+  const [isHovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
     <>
     <h1 className="flex items-center justify-center z-1 h1 text-accent md:absolute md:rotate-90 h1 text-2xl md:text-5xl md:right-[2rem] md:top-[10rem]">Skills</h1>
     <div className="flex lg:flex-row flex-col w-[95%]  md:w-[70%] m-auto z-1">
       <motion.div
+       onMouseEnter={handleMouseEnter}
+       onMouseLeave={handleMouseLeave}
        className="skillBubble m-auto flex h-[30rem] md:h-[38rem] flex-wrap items-center justify-center overflow-hidden relative">
         {skills.map((skill) => {
           return (
             <motion.div
               initial={{ translateY: "0%"}}
               transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse"}}
-              animate={{ translateY: "-380%" }}
+              animate={!isHovered ? { translateY: "-380%" } : {}}
               key={skill.id}
               className="p-4 flex flex-col items-center justify-center"
             >

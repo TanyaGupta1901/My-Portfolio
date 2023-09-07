@@ -1,5 +1,4 @@
 import Nav from "./Nav";
-import TopLeftImg from "./TopLeftImg";
 import Header from "./Header";
 import { Sora } from '@next/font/google';
 
@@ -12,7 +11,6 @@ const sora = Sora({
 const Layout = ({ children }) => {
   return (
     <div className={`page text-white bg-main bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
-      {/* <TopLeftImg /> */}
       <Nav />
       <Header />
       {children}

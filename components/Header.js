@@ -4,7 +4,7 @@ const socials = [
   {
     id: 1,
     name: "LinkedIn",
-    link: "",
+    link: "https://www.linkedin.com/in/tanya-gupta-b40621197/",
     icon: <RiLinkedinFill />,
   },
   {
@@ -16,7 +16,7 @@ const socials = [
   {
     id: 3,
     name: "Twitter",
-    link: "",
+    link: "https://twitter.com/Tzee1901",
     icon: <RiTwitterFill />,
   },
 ];
@@ -40,7 +40,7 @@ const Header = () => {
       className="flex flex-row justify-center md:justify-evenly items-center gap-[0.5rem] md:gap-[4rem] p-3 md:mr-8">
         {socials.map((item) => (
           <li className="text-accent h1 hover:text-white" key={item.id}>
-            <a href={item.link}>{item.icon}</a>
+            <a href={item.link} target="_blank">{item.icon}</a>
           </li>
         ))}
       </motion.ul>

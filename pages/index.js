@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi2";
 import TiltImage from "../components/TiltImage";
-import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   return (
@@ -12,11 +12,23 @@ const Home = () => {
           Hi, my name is<span className="text-accent"></span>
           <br /> <span className="text-accent">Tanya Gupta</span>.
         </p>
-        <p className="xl:w-[90%] mt-[1rem] h-[10rem]">
+        <p className="xl:w-[90%] m-y-[2rem]">
+          Creative software developer, experienced in building user-friendly and
+          engaging web experiences<br/>
+          <span className="md:hidden text-accent font-light underline">
+            <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E">
+              Resume <HiArrowRight className="text-md inline text-white" />
+            </a>
+          </span>
+        </p>
+        <p className="text-md text-accent font-bold">
           <Typewriter
             words={[
-              "Creative software developer, experienced in building user-friendly and engaging web experiences"]}
-            typeSpeed={200}
+              "Fullstack Developer",
+              "Web Developer",
+              "Frontend Developer",
+            ]}
+            loop
             cursor
             cursorColor="#19FAC4"
           />
@@ -34,20 +46,22 @@ const Home = () => {
             alt="rounded-text"
             className="animate-spin-slow"
           />
-          <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E"><HiArrowRight className="absolute top-[45%] left-[45%] text-xl hover:scale-[2] transition-all duration-300" /></a>
+          <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E">
+            <HiArrowRight className="absolute top-[43%] left-[45%] text-xl hover:scale-[2] transition-all duration-300" />
+          </a>
         </motion.div>
       </div>
       <div className="z-0">
-      <TiltImage>
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: [0, 0.5, 1, 1.2, 1] }}
-          transition={{ duration: 1.5 }}
-          className="flex justify-center items-center xl:bg-white xl:bg-opacity-10 xl:backdrop-blur-s drop-shadow-lg rounded-full p-4"
-        >
-          <Image src="/devgirl2.png" width={550} height={550} alt="devgirl" />
-        </motion.div>
-      </TiltImage>
+        <TiltImage>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: [0, 0.5, 1, 1.2, 1] }}
+            transition={{ duration: 1.5 }}
+            className="flex justify-center items-center xl:bg-white xl:bg-opacity-10 xl:backdrop-blur-s drop-shadow-lg rounded-full p-4"
+          >
+            <Image src="/devgirl2.png" width={550} height={550} alt="devgirl" />
+          </motion.div>
+        </TiltImage>
       </div>
     </div>
   );

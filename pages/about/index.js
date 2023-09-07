@@ -19,7 +19,7 @@ const About = () => {
         animate={{opacity: 1, scale: 1}}
         transition={{duration: 1.5, delay: 1}}
         className="flex flex-col">
-          <p className="text-justify py-1 text-sm md:text-lg">
+          <p className="text-justify py-1 my-auto md:py-[3rem] text-sm md:text-lg">
             I am Tanya Gupta, a software developer based in India. I am a
             multipotentialite with a passion for the tech world. I am a
             self-driven individual who is always eager to learn and take on new
