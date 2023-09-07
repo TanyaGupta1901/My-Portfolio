@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 
 function TiltImage({children}) {
   return (
-    <Tilt >{children}</Tilt>
+    <Tilt tiltMaxAngleX={'45'} tiltMaxAngleY={'45'}>{children}</Tilt>
   )
 }
 

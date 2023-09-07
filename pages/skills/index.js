@@ -243,7 +243,7 @@ const Services = () => {
               key={skill.id}
               className="p-4 flex flex-col items-center justify-center"
             >
-              <div className="bg-white/30 p-4 lg:p-10 bubble rounded-full w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem] flex items-center justify-center">
+              <div className="bg-white/10 p-4 lg:p-10 bubble rounded-full w-[4rem] h-[4rem] md:w-[8rem] md:h-[8rem] flex items-center justify-center">
                 <img src={skill.src} alt={skill.label} width={'100%'} height={'100%'}/>
               </div>
               <p className="text-sm">{skill.label}</p>
@@ -251,19 +251,6 @@ const Services = () => {
           );
         })}
       </motion.div>
-      {/* <motion.div 
-      initial={{translateX: '-10%', translateY: '5%'}}
-      animate={{translateY: ['0%', '5%', '0%'], translateX: '10%', scale: [1.1, 1, 1.1]}}
-      transition={{duration: 10, repeat: Infinity, repeatType: 'reverse'}}
-      className="w-full lg:w-[40%] flex items-center justify-center z-10">
-        <Image
-          src="/responsive.png"
-          width={1200}
-          height={1200}
-          alt="responsive"
-          className="rounded-full"
-        ></Image>
-      </motion.div> */}
     </div>
     </>
   );
