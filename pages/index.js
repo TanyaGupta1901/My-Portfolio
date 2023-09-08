@@ -6,20 +6,16 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   return (
+    <>
     <div className="flex flex-col md:flex-row justify-center items-center m-2 md:w-[80%] md:m-auto xl:width-[60%]">
       <div className="flex flex-col justify-between items-start text-white font-bold xl:w-[40%] w-full pr-8 md:ml-8">
         <p className="h1">
-          Hi, my name is<span className="text-accent"></span>
+          Hey, my name is<span className="text-accent"></span>
           <br /> <span className="text-accent">Tanya Gupta</span>.
         </p>
         <p className="xl:w-[90%] m-y-[2rem]">
           Creative software developer, experienced in building user-friendly and
           engaging web experiences<br/>
-          <span className="md:hidden text-accent font-light underline">
-            <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E">
-              Resume <HiArrowRight className="text-md inline text-white" />
-            </a>
-          </span>
         </p>
         <p className="text-md text-accent font-bold">
           <Typewriter
@@ -32,6 +28,11 @@ const Home = () => {
             cursor
             cursorColor="#19FAC4"
           />
+          <span className="md:hidden text-accent font-light underline block">
+            <a href="https://drive.google.com/drive/folders/14DyqgEGDc-23kVRuoo-y-dTEGheG3Y8E">
+              Resume <HiArrowRight className="text-md inline text-white" />
+            </a>
+          </span>
         </p>
         <motion.div
           initial={{ y: 200, opacity: 0 }}
@@ -64,6 +65,14 @@ const Home = () => {
         </TiltImage>
       </div>
     </div>
+    <motion.div
+    initial={{translateX: 200}}
+    animate={{translateX:0}}
+    transition={{duration: 1, ease: "easeIn"}}
+    className="absolute bottom-25 right-20 md:bottom-10 md:right-10 border-accent border p-2 rounded-full">
+      <p className="text-[12px] text-accent">Try hovering on the doll!</p>
+    </motion.div>
+    </>
   );
 };
 
