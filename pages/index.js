@@ -69,7 +69,7 @@ const Home = () => {
     initial={{translateX: 200}}
     animate={{translateX:0}}
     transition={{duration: 1, ease: "easeIn"}}
-    className="absolute bottom-25 right-20 md:bottom-10 md:right-10 border-accent border p-2 rounded-full">
+    className="absolute bottom-25 right-20 md:bottom-10 md:right-10 border-accent border p-2 rounded-full hidden md:block">
       <p className="text-[12px] text-accent">Try hovering on the doll!</p>
     </motion.div>
     </>
